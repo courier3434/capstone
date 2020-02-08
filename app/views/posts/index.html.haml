@@ -1,1 +1,10 @@
-%h1 Forum Home
+%h1 Welcome to the Forum
+
+- @posts.each do |post|
+ %h2= link_to post.title, post
+ %p
+ Posted at
+ = time_ago_in_words(post.created_at)
+
+
+= link_to "New Post", new_post_path

@@ -1,0 +1,7 @@
+<h1> <%= @post.title %> </h1>
+<p> <%= @post.content %> </p>
+
+<%= simple_form_for @comment, url: post_comments_path(@post) do |f| %>
+  <%= f.input :comment %>
+  <%= f.submit "Post", class: 'btn btn-primary' %>
+<% end %>
